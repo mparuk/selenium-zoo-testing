@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selenium Demo Site</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main id="appContainer" class="app-container">
+      <section id="loginSection" class="card">
+        <h1 id="pageTitle">Selenium Demo Login</h1>
+        <p id="pageSubtitle">
+          Use <strong>fast_user</strong> or <strong>slow_user</strong> to test
+          different response times.
+        </p>
+
+        <div id="credentialsInfoBox" class="credentials-box">
+          <p id="credentialsBoxTitle">Demo Test Accounts</p>
+          <div class="credential-row" id="fastUserCredentials">
+            <span class="credential-label">Fast Login:</span>
+            <span class="credential-value" id="fastUserValue"
+              >fast_user / fast123</span
+            >
+          </div>
+          <div class="credential-row" id="slowUserCredentials">
+            <span class="credential-label">Slow Login:</span>
+            <span class="credential-value" id="slowUserValue"
+              >slow_user / slow123</span
+            >
+          </div>
+        </div>
+
+        <form id="loginForm" novalidate>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              autocomplete="off"
+              placeholder="e.g. fast_user"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              autocomplete="off"
+              placeholder="e.g. fast123"
+            />
+          </div>
+
+          <button type="submit" id="loginBtn">Log In</button>
+
+          <div id="spinner" class="spinner hidden">
+            <div class="spinner-circle"></div>
+            <span id="spinnerText">Logging in, please wait...</span>
+          </div>
+
+          <p id="errorMessage" class="error-message hidden"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer id="pageFooter">
+      <p>Selenium Testing Demo &mdash; not a real login system</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

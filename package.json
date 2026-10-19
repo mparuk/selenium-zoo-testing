@@ -1,0 +1,20 @@
+{
+  "name": "template-ts-smqa",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "build": "tsc",
+    "clean": "rmdir /s /q dist",
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "selenium-webdriver": "^4.46.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.2",
+    "@types/selenium-webdriver": "^4.35.6",
+    "tsx": "^4.23.1",
+    "typescript": "^7.0.2"
+  }
+}

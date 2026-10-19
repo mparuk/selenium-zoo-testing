@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zoo Database - Selenium Demo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main id="zooContainer" class="zoo-container">
+      <header id="zooHeader">
+        <h1 id="zooTitle">Zoo Animal Database</h1>
+        <p id="loggedInAsInfo"></p>
+        <p id="zooSubtitle">
+          Sample records for scraping and data-extraction tests
+        </p>
+        <a href="index.html" id="backToLoginBtn" class="link-button-outline"
+          >&larr; Back to Login</a
+        >
+      </header>
+
+      <section id="animalList" class="animal-list">
+        <article class="animal-card" id="animal-1" data-animal-id="1">
+          <div class="animal-image" id="animal-1-image">🦁</div>
+          <h2 class="animal-name" id="animal-1-name">African Lion</h2>
+          <p class="animal-description" id="animal-1-description">
+            A large, social big cat native to sub-Saharan Africa, known for
+            living in prides and the male's distinctive mane.
+          </p>
+          <div class="animal-meta">
+            <span class="meta-item" id="animal-1-habitat"
+              >Habitat: Savanna</span
+            >
+            <span class="meta-item" id="animal-1-diet">Diet: Carnivore</span>
+          </div>
+        </article>
+
+        <article class="animal-card" id="animal-2" data-animal-id="2">
+          <div class="animal-image" id="animal-2-image">🐘</div>
+          <h2 class="animal-name" id="animal-2-name">African Elephant</h2>
+          <p class="animal-description" id="animal-2-description">
+            The largest living land animal, recognized for its long trunk, large
+            ears, and strong family bonds within herds.
+          </p>
+          <div class="animal-meta">
+            <span class="meta-item" id="animal-2-habitat"
+              >Habitat: Grassland</span
+            >
+            <span class="meta-item" id="animal-2-diet">Diet: Herbivore</span>
+          </div>
+        </article>
+
+        <article class="animal-card" id="animal-3" data-animal-id="3">
+          <div class="animal-image" id="animal-3-image">🐧</div>
+          <h2 class="animal-name" id="animal-3-name">Emperor Penguin</h2>
+          <p class="animal-description" id="animal-3-description">
+            The tallest and heaviest penguin species, native to Antarctica, well
+            adapted to extreme cold and long dives for fish.
+          </p>
+          <div class="animal-meta">
+            <span class="meta-item" id="animal-3-habitat"
+              >Habitat: Antarctic Ice</span
+            >
+            <span class="meta-item" id="animal-3-diet">Diet: Carnivore</span>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer id="zooFooter">
+      <p>Selenium Testing Demo &mdash; Zoo Database Page</p>
+    </footer>
+
+    <script>
+      const loggedInUser = sessionStorage.getItem("loggedInUser");
+      const accountType = sessionStorage.getItem("accountType");
+      const infoEl = document.getElementById("loggedInAsInfo");
+      if (loggedInUser && infoEl) {
+        infoEl.textContent = `Logged in as ${loggedInUser} (${accountType})`;
+      }
+    </script>
+  </body>
+</html>

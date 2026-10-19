@@ -1,0 +1,358 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 420px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 32px 28px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#pageTitle {
+  font-size: 22px;
+  color: #2d2d3a;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+#pageSubtitle {
+  font-size: 13px;
+  color: #6b6b7b;
+  text-align: center;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d5d5e0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #764ba2;
+}
+
+#loginBtn,
+#logoutBtn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #764ba2;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.1s ease;
+}
+
+#loginBtn:hover,
+#logoutBtn:hover {
+  background: #663d91;
+}
+
+#loginBtn:active,
+#logoutBtn:active {
+  transform: scale(0.98);
+}
+
+#loginBtn:disabled {
+  background: #b3a3c9;
+  cursor: not-allowed;
+}
+
+.spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 16px;
+  font-size: 13px;
+  color: #6b6b7b;
+}
+
+.spinner-circle {
+  width: 18px;
+  height: 18px;
+  border: 3px solid #e0e0ea;
+  border-top: 3px solid #764ba2;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.error-message {
+  margin-top: 14px;
+  padding: 10px 12px;
+  background: #fdecea;
+  color: #c0392b;
+  border-radius: 8px;
+  font-size: 13px;
+  text-align: center;
+}
+
+#welcomeMessage {
+  font-size: 20px;
+  color: #2d2d3a;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+#loginTimeInfo {
+  font-size: 12px;
+  color: #8a8a99;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.dashboard-content {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.stat-box {
+  flex: 1;
+  background: #f5f4fa;
+  border-radius: 10px;
+  padding: 14px;
+  text-align: center;
+}
+
+.stat-label {
+  display: block;
+  font-size: 11px;
+  color: #8a8a99;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.stat-value {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  color: #764ba2;
+}
+
+#pageFooter {
+  margin-top: 20px;
+  color: #eae6f5;
+  font-size: 12px;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Zoo Page Styles ===== */
+
+.zoo-container {
+  width: 100%;
+  max-width: 720px;
+}
+
+#zooHeader {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+#zooTitle {
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+#zooSubtitle {
+  font-size: 13px;
+  color: #eae6f5;
+  margin-bottom: 16px;
+}
+
+.link-button,
+.link-button-outline {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.link-button {
+  width: 100%;
+  background: #f5f4fa;
+  color: #764ba2;
+  margin-bottom: 10px;
+  border: 1px solid #764ba2;
+}
+
+.link-button:hover {
+  background: #ece8f7;
+}
+
+.link-button-outline {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.link-button-outline:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.animal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.animal-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 22px 24px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.animal-image {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.animal-name {
+  font-size: 19px;
+  color: #2d2d3a;
+  margin-bottom: 8px;
+}
+
+.animal-description {
+  font-size: 14px;
+  color: #5a5a6b;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.animal-meta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  font-size: 12px;
+  font-weight: 600;
+  color: #764ba2;
+  background: #f0edf9;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+#zooFooter {
+  margin-top: 20px;
+  color: #eae6f5;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* ===== Credentials Info Box ===== */
+
+.credentials-box {
+  background: #f5f4fa;
+  border: 1px dashed #b8a9d9;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 22px;
+}
+
+#credentialsBoxTitle {
+  font-size: 12px;
+  font-weight: 700;
+  color: #764ba2;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.credential-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  padding: 4px 0;
+}
+
+.credential-label {
+  color: #5a5a6b;
+  font-weight: 600;
+}
+
+.credential-value {
+  color: #2d2d3a;
+  font-family: "Courier New", monospace;
+  background: #fff;
+  padding: 2px 8px;
+  border-radius: 5px;
+  border: 1px solid #e0dced;
+}
